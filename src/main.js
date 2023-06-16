@@ -6,7 +6,7 @@ const app = express();
 app.use(cors()); // allowing everyone.
 
 async function addrecord(req, res) {
-  const uri = "mongodb://127.0.0.1:27017";
+  const uri = "mongodb://loacalhost:27017";
   const client = new MongoClient(uri);
 
   const db = client.db("mydb");
@@ -27,7 +27,7 @@ async function addrecord(req, res) {
 }
 
 async function findAllMessage(req, res) {
-  const uri = "mongodb://127.0.0.1:27017";
+  const uri = "mongodb://loacalhost:27017";
   const client = new MongoClient(uri);
 
   const db = client.db("mydb");
@@ -46,7 +46,7 @@ function helloPost(req, res) {
 
 // NEW TODO API
 async function addTodo(req, res) {
-  const uri = "mongodb://127.0.0.1:27017";
+  const uri = "mongodb://loacalhost:27017";
   const client = new MongoClient(uri);
 
   const db = client.db("project");
@@ -64,7 +64,7 @@ async function addTodo(req, res) {
 }
 
 async function addUserRecord(req, res) {
-  const uri = "mongodb://127.0.0.1:27017";
+  const uri = "mongodb://loacalhost:27017";
   const client = new MongoClient(uri);
 
   const db = client.db("project");
